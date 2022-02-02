@@ -18,9 +18,7 @@ file = st.file_uploader("Please upload an image file", type=["jpg", "png"])
 def import_and_predict(image_data, model):
   image = Image.open(image_data)
   img_array = np.array(image)
-  gray = cv2.imwrite('out.jpg', cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR))
-  #image_data = cv2.imread(img_array,cv2.IMREAD_COLOR)
-  #gray = cv2.cvtColor(image_data, cv2.COLOR_BGR2GRAY) #convert to grey scale
+  gray = cv2.cvtColor(img_array, cv2.COLOR_BGR2GRAY) #convert to grey scale
   gray = cv2.bilateralFilter(gray, 13, 15, 15)
   edged = cv2.Canny(gray, 30, 200) #Perform Edge detection
   contours=cv2.findContours(edged.copy(),cv2.RETR_TREE,
