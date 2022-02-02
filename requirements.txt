@@ -1,6 +1,5 @@
-streamlit==0.61.0
+streamlit
 numpy==1.19.5
 tensorflow-cpu
-imutils
-opencv-python==4.5.5.62
-argparse
+imutils==0.5.4
+opencv-python-headless
