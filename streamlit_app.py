@@ -1,9 +1,9 @@
 import streamlit as st
 import tensorflow
-import imutils
+#import imutils
 import cv2
 from tensorflow.keras.models import load_model
-from imutils.contours import sort_contours
+#from imutils.contours import sort_contours
 import numpy as np
 import argparse
 
