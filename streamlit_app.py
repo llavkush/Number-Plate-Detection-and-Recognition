@@ -38,7 +38,7 @@ def import_and_predict(image_data, model):
   # Masking the part other than the number plate
   mask = np.zeros(gray.shape,np.uint8)
   new_image = cv2.drawContours(mask,[screenCnt],0,255,-1,)
-  new_image = cv2.bitwise_and(image_data,image_data,mask=mask)
+  new_image = cv2.bitwise_and(img_array,img_array,mask=mask)
   #Cropping Number plate
   (x, y) = np.where(mask == 255)
   (topx, topy) = (np.min(x), np.min(y))
