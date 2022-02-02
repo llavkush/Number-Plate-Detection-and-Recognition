@@ -114,7 +114,6 @@ def import_and_predict(image_data, model):
   cv2.rectangle(Cropped, (x, y), (x + w, y + h), (0, 255, 0), 2)
   cv2.putText(Cropped, label, (x - 10, y - 10),cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 255, 0), 2)
   #cv2_imshow(Cropped)
-  cv2.imshow(Cropped)
   return output
 
 
