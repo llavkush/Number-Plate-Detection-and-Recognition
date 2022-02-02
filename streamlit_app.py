@@ -131,11 +131,7 @@ loaded_model = load_model('OCR_Resnet.h5')
 if file is None:
     st.text("Please upload an image file")
 else:
-    image = Image.open(file)
-    st.image(image, use_column_width=True)
-    img_array = np.array(image)
-    #cv2.imwrite('out.jpg', cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR))
-    prediction = import_and_predict(img_array, loaded_model)
+    prediction = import_and_predict(file, loaded_model)
     st.write(prediction)
     
     
