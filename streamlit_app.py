@@ -7,7 +7,6 @@ from tensorflow.keras.models import load_model
 import numpy as np
 import argparse
 
-loaded_model = load_model('OCR_Resnet.h5')
 
 
 st.write("""
@@ -123,7 +122,7 @@ def import_and_predict(image_data, model):
 
 
 #Loading our model
-loaded_model = load_model('/content/OCR_Resnet.h5')
+loaded_model = load_model('OCR_Resnet.h5')
 
 
 if file is None:
