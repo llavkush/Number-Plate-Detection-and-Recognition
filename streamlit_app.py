@@ -130,6 +130,7 @@ else:
     image = Image.open(file)
     st.image(image, use_column_width=True)
     prediction = import_and_predict(file, loaded_model)
+    st.write("Recognised Test is : ")
     st.write(prediction)
     
     
