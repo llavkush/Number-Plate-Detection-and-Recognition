@@ -1,11 +1,11 @@
 import streamlit as st
 import tensorflow
 from tensorflow.keras.models import load_model
-from imutils.contours import sort_contours
+from imutils import sort_contours
 import numpy as np
 import argparse
 import imutils
-from cv2 import cv2
+import cv2
 
 loaded_model = load_model('/content/OCR_Resnet.h5')
 
