@@ -16,7 +16,7 @@ This app recognise the Registraion Number from the Image of the Vehicle Number P
 file = st.file_uploader("Please upload an image file", type=["jpg", "png"])
 
 def import_and_predict(image_data, model):
-  #img = cv2.imread(image_data,cv2.IMREAD_COLOR)
+  #image_data = cv2.imread(image_data,cv2.IMREAD_COLOR)
   gray = cv2.cvtColor(image_data, cv2.COLOR_BGR2GRAY) #convert to grey scale
   gray = cv2.bilateralFilter(gray, 13, 15, 15)
   edged = cv2.Canny(gray, 30, 200) #Perform Edge detection
@@ -128,9 +128,11 @@ loaded_model = load_model('OCR_Resnet.h5')
 if file is None:
     st.text("Please upload an image file")
 else:
-    image = cv2.imread(file)
+    image = Image.open(file)
     st.image(image, use_column_width=True)
-    prediction = import_and_predict(image, loaded_model)
+    img_array = np.array(image)
+    #cv2.imwrite('out.jpg', cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR))
+    prediction = import_and_predict(img_array, loaded_model)
     st.write(prediction)
     
     
