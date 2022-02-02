@@ -126,7 +126,7 @@ def import_and_predict(image_data, model):
 loaded_model = load_model('/content/OCR_Resnet.h5')
 
 
-f file is None:
+if file is None:
     st.text("Please upload an image file")
 else:
     image = cv2.imread(file)
