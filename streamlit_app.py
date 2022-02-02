@@ -52,7 +52,7 @@ def import_and_predict(image_data, model):
   cnts = imutils.grab_contours(cnts)
   cnts = sort_contours(cnts, method="left-to-right")[0]
   chars = []
-  #Image Segentaion for Single Characters
+  #Image Segmentaion for Single Characters
   for c in cnts:
 	  # compute the bounding box of the contour
 	  (x, y, w, h) = cv2.boundingRect(c)
@@ -130,7 +130,7 @@ else:
     image = Image.open(file)
     st.image(image, use_column_width=True)
     prediction = import_and_predict(file, loaded_model)
-    st.write("Recognised Test is : ")
+    st.write("Recognised Texts are : ")
     st.write(prediction)
     
     
