@@ -1,6 +1,6 @@
 streamlit==0.61.0
 numpy==1.19.5
-tensorflow
+tensorflow-cpu
 imutils
 opencv-python==4.5.5.62
 argparse
