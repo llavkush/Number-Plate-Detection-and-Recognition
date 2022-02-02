@@ -3,3 +3,4 @@ numpy==1.19.5
 tensorflow-cpu
 imutils==0.5.4
 opencv-python-headless
+pillow==6.2.0
