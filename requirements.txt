@@ -1,5 +1,5 @@
 streamlit
-numpy==1.19.5
+numpy
 tensorflow-cpu
 imutils==0.5.4
 opencv-python-headless
